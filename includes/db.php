@@ -64,6 +64,13 @@ class EL_Db {
 		return $wpdb->get_results($sql);
 	}
 
+  public function get_events_by_month_year($month, $year) {
+    global $wpdb;
+    $where_string = "YEAR(start_date) = $year AND MONTH(start_date) = $month";
+    $sql = 'SELECT * FROM '.$this->table.' WHERE '.$where_string;
+    return $wpdb->get_results($sql);
+  }
+
 	public function get_event( $id ) {
 		global $wpdb;
 		$sql = 'SELECT * FROM '.$this->table.' WHERE id = '.$id.' LIMIT 1';

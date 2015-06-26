@@ -35,6 +35,7 @@ define('EL_URL', plugin_dir_url(__FILE__));
 define('EL_PATH', plugin_dir_path(__FILE__));
 
 require_once(EL_PATH.'includes/options.php');
+require_once(EL_PATH.'api/register_api.php');
 
 // MAIN PLUGIN CLASS
 class Event_List {
@@ -120,7 +121,6 @@ class Event_List {
 		$this->styles_loaded = true;
 	}
 } // end class linkview
-
 
 // create a class instance
 $event_list = new Event_List();
