@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Event List
-Plugin URI: http://wordpress.org/extend/plugins/event-list/
+Plugin URI: https://github.com/JesusisFreedom/wp-event-list/tree/master
 Description: Manage your events and show them in a list view on your site.
-Version: 0.7.4
-Author: Michael Burtscher
-Author URI: http://wordpress.org/extend/plugins/event-list/
+Version: 0.8.0
+Author: Austin Adams - Michael Burtscher
+Author URI: http://farmingtonwebdesign.net
 Text Domain: event-list
 License: GPLv2
 

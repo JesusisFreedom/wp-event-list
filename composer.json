@@ -1,0 +1,12 @@
+{
+    "name": "jesusisfreedom/wp-event-list",
+    "type": "wordpress-plugin",
+    "license": "GPL2",
+    "authors": [
+        {
+            "name": "Austin Adams",
+            "email": "austin@farmingtonwebdesign.net"
+        }
+    ],
+    "require": {}
+}
