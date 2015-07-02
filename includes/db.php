@@ -68,7 +68,17 @@ class EL_Db {
     global $wpdb;
     $where_string = "YEAR(start_date) = $year AND MONTH(start_date) = $month";
     $sql = 'SELECT * FROM '.$this->table.' WHERE '.$where_string;
-    return $wpdb->get_results($sql);
+    $results = $wpdb->get_results($sql);
+
+    foreach($results as &$result){
+      $date_array = date_parse($result->time);
+      $start_time = '';
+      if(empty($date_array['errors']) && is_numeric($date_array['hour']) && is_numeric($date_array['minute'])) {
+        $start_time = mysql2date(get_option('time_format'), $result->time);
+      }
+      $result->date = $result->start_date.' '.$start_time;
+    }
+    return $results;
   }
 
 	public function get_event( $id ) {
